@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}甲鱼网 - 激活账户{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>
+        欢迎, {{ current_user.username }}!
+    </h1>
+    <h3>但你还没激活你的账户呢。</h3>
+    <p>
+        在你进入甲鱼网之前得先激活账户，这样才能拥有更多权限。
+        检查你的邮箱，你应该收到了一封确认邮件。
+    </p>
+    <p>
+        没收到?那再来一封
+        <a href="{{ url_for('auth.resend_confirmation') }}">点这里</a>
+    </p>
+</div>
+{% endblock %}

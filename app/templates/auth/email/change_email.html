@@ -1,0 +1,7 @@
+<p>亲爱的 {{ user.username }},</p>
+<p>更改你的甲鱼网账户邮箱， 请<a href="{{ url_for('auth.change_email', token=token, _external=True) }}">点这里</a>.</p>
+<p>你也可以复制以下链接来更改你的账户邮箱</p>
+<p>{{ url_for('auth.change_email', token=token, _external=True) }}</p>
+<p>此致，</p>
+<p>甲鱼网</p>
+<p><small>不要回复此邮件。</small></p>
